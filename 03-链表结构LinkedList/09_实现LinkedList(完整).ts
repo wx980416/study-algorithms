@@ -77,7 +77,7 @@ class LinkedList<T> {
   }
 
   removeAt(position: number): T | null {
-    if (position < 0 || position > this.size) return null;
+    if (position < 0 || position >= this.size) return null;
 
     const current = this.getNode(position);
     if (position === 0) {
@@ -99,7 +99,7 @@ class LinkedList<T> {
   }
 
   get(position: number): T | null {
-    if (position < 0 || position > this.size) return null;
+    if (position < 0 || position >= this.size) return null;
 
     const current = this.getNode(position);
     // let current = this.head;
@@ -112,7 +112,7 @@ class LinkedList<T> {
   }
 
   update(value: T, position: number): boolean {
-    if (position < 0 || position > this.size) return false;
+    if (position < 0 || position >= this.size) return false;
 
     const current = this.getNode(position);
     if (current) {
